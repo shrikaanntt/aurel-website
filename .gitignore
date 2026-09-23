@@ -1,0 +1,24 @@
+#python
+__pycache__/
+*.py[cod]
+*$py.class
+
+#virtual environment
+venv/
+.venv/
+env/
+.env
+
+#streamlit secrets
+.streamlit/secrets.toml
+
+#IDE
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+.ipynb_checkpoints/
+
+.log
