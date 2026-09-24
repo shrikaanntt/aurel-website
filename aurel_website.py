@@ -77,7 +77,7 @@ div[data-baseweb="select"] span{color:#171716!important}
 .detail-title{font:52px/1.05 'Playfair Display',serif}.detail{color:#6e6a62;line-height:1.8}.review{padding:22px;border:1px solid var(--line);background:var(--white);border-radius:8px;min-height:130px}
 .cartrow{padding:18px 0;border-bottom:1px solid var(--line)}
 .chat{background:var(--white);border:1px solid #ded7ca;border-radius:12px;padding:25px}
-div[data-testid="stChatMessage"]{background:var(--white)!important;border:1px solid #e0d9cc;border-radius:10px}
+div[data-testid="stChatMessage"]{background:var(--white)!important;border:1px solid #e0d9cc;border-radius:10px;color:#171716!important}div[data-testid="stChatMessage"] *{color:#171716!important}
 div[data-testid="stChatInput"]{background:var(--white)!important;border:1px solid #cfc7ba!important;border-radius:8px!important}
 div[data-testid="stChatInput"] textarea{background:var(--white)!important;color:#171716!important;-webkit-text-fill-color:#171716!important}
 div[data-testid="stChatInput"] button{background:#171716!important;color:#fff!important}
@@ -199,7 +199,7 @@ elif st.session_state.page=="Concierge":
         with cols[i%3]:
             if st.button(s,key="cs"+str(i),use_container_width=True):st.session_state.chat.append({"role":"user","content":s});st.rerun()
     for m in st.session_state.chat:
-        with st.chat_message(m["role"]):st.markdown(f'<div style="color:#FFFFFF;">{m["content"]}</div>', unsafe_allow_html=True)
+        with st.chat_message(m["role"]):st.markdown({m["content"])
     q=st.chat_input("Ask AUREL Concierge anything...")
     if q:
         st.session_state.chat.append({"role":"user","content":q})
