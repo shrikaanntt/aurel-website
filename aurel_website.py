@@ -199,7 +199,7 @@ elif st.session_state.page=="Concierge":
         with cols[i%3]:
             if st.button(s,key="cs"+str(i),use_container_width=True):st.session_state.chat.append({"role":"user","content":s});st.rerun()
     for m in st.session_state.chat:
-        with st.chat_message(m["role"]):st.markdown(f'<div style="color:#FFFFFF;">{m["content"]}</div', unsafe_allow_html=True)
+        with st.chat_message(m["role"]):st.markdown(f'<div style="color:#FFFFFF;">{m["content"]}</div>', unsafe_allow_html=True)
     q=st.chat_input("Ask AUREL Concierge anything...")
     if q:
         st.session_state.chat.append({"role":"user","content":q})
